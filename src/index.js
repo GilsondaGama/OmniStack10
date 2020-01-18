@@ -5,9 +5,11 @@ const routes = require('./routes')
 
 const app = express()
 
-mongoose.connect('mongodb+srv://Omni10:omni10@cluster0-b3b2t.mongodb.net/week10?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Omni10:Omni10@cluster0-b3b2t.mongodb.net/week10?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  //useFindAndModify: false,
+  useCreateIndex: true
 })
 
 app.use(express.json())
